@@ -16,13 +16,13 @@ The following plots show **class-wise accuracy across all skin disease categorie
 These visualizations help identify which conditions are consistently well-classified and which remain challenging across architectures.
 
 ### ResNet – Per-Class Accuracy
-![ResNet Per-Class Accuracy](figures/resnet_per_class_accuracy.png)
+![ResNet Per-Class Accuracy](resnet_per_class_accuracy.png)
 
 ### EfficientNet – Per-Class Accuracy
-![EfficientNet Per-Class Accuracy](figures/efficientnet_per_class_accuracy.png)
+![EfficientNet Per-Class Accuracy](efficientnet_per_class_accuracy.png)
 
 ### MobileNetV2 – Per-Class Accuracy
-![MobileNetV2 Per-Class Accuracy](figures/mobilenetv2_per_class_accuracy.png)
+![MobileNetV2 Per-Class Accuracy](mobilenetv2_per_class_accuracy.png)
 
 ### Key Observations
 - Deep architectures (ResNet, EfficientNet) generally achieve higher accuracy on visually complex skin conditions.
