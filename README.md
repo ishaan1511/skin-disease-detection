@@ -49,6 +49,8 @@ Key architectural components include:
 - **Squeeze-and-Excitation (SE) channel attention**
 - **Stochastic depth (DropPath) regularization**
 
+![model-arch](modelarch.png)
+
 ---
 
 ### Input Stem
@@ -90,7 +92,13 @@ The blocks incorporate:
 Global average pooling is applied to the final feature maps, followed by dropout and a fully connected layer to produce class predictions. This lightweight head ensures that performance gains stem from improved feature learning rather than excessive parameter count.
 
 ### Per-Class Accuracy Results
-![ResNet Per-Class Accuracy](OurModel.png)
+![Our Model Per-Class Accuracy](OurModel.png)
 
-## 6. 
+## 6. Final Results
+
+
+
+## 7. References
+
+
 
