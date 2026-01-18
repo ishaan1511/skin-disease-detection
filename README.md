@@ -37,15 +37,60 @@ These visualizations help identify which conditions are consistently well-classi
 ### MobileNetV2 – Per-Class Accuracy
 ![MobileNetV2 Per-Class Accuracy](mobilenetv2_per_class_accuracy.png)
 
-## 4. Benchmark Analysis
+## 4. Our Model
 
-Our analysis reveals that while benchmark models achieve strong average performance, they share several limitations:
+### Model Architecture 
 
-- Performance varies significantly across disease classes, particularly for visually similar conditions  
-- Rare or underrepresented classes consistently exhibit lower accuracy  
-- Increasing model capacity alone does not resolve fine-grained classification errors  
+We made a CNN tailored for skin disease detection, inspired by ResNet but enhanced with modern architectural improvements. The model is designed to outperform standard CNN benchmarks by improving robustness and class-level discrimination on dermatological images.
 
-These findings indicate that general-purpose CNN architectures are insufficient for capturing the nuanced visual patterns required for reliable skin disease detection.
+Key architectural components include:
+- A **medical-image–friendly convolutional stem**
+- **Pre-activation residual blocks**
+- **Squeeze-and-Excitation (SE) channel attention**
+- **Stochastic depth (DropPath) regularization**
 
-## 5. Our Model
+---
+
+### Input Stem
+
+Instead of the standard 7×7 convolution used in ResNet, the model employs a smaller stem composed of stacked 3×3 convolutions with early but controlled downsampling.
+
+This design better preserves fine-grained visual details such as lesion texture and boundaries, which are critical for distinguishing similar skin conditions.
+
+---
+
+### Backbone Structure
+
+The backbone consists of four sequential stages with increasing channel capacity and decreasing spatial resolution:
+
+| Stage | Resolution | Channels |
+|------|------------|----------|
+| Layer 1 | 56 × 56 | 48 |
+| Layer 2 | 28 × 28 | 96 |
+| Layer 3 | 14 × 14 | 192 |
+| Layer 4 | 7 × 7 | 288 |
+
+Each stage is composed of residual blocks that enable deep feature learning while maintaining stable optimization.
+
+---
+
+### Residual Block Design
+
+Each residual block follows a **pre-activation** design, where normalization and activation precede convolution. This improves gradient flow and leads to more stable training, particularly on medical datasets.
+
+The blocks incorporate:
+- **SiLU activation**, providing smoother non-linear transformations than ReLU
+- **Squeeze-and-Excitation (SE)** modules to adaptively emphasize informative feature channels
+- **Stochastic depth**, which randomly drops residual paths during training to improve generalization
+
+---
+
+### Classification Head
+
+Global average pooling is applied to the final feature maps, followed by dropout and a fully connected layer to produce class predictions. This lightweight head ensures that performance gains stem from improved feature learning rather than excessive parameter count.
+
+### Per-Class Accuracy Results
+![ResNet Per-Class Accuracy](OurModel.png)
+
+## 6. 
 
