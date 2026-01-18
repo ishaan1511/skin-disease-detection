@@ -97,8 +97,36 @@ Global average pooling is applied to the final feature maps, followed by dropout
 ## 6. Final Results
 
 
+The table below compares classification accuracy and model size across standard CNN benchmarks and our proposed model for skin disease detection.
+
+| Model           | Accuracy (%) | Number of Parameters (Millions) |
+|-----------------|--------------|----------------------------------|
+| ResNet-18       | 58.36        | 11.7 M                           |
+| EfficientNet-B0 | 35.20        | 5.3 M                            |
+| MobileNetV2     | 49.10        | 3.4 M                            |
+| **Our Model**   | **71.12**    | **9.2 M**                        |
+
+
+
 
 ## 7. References
 
+- **Skin Cancer ISIC Dataset**  
+  [https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic/code](https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic/code)
+
+- **Deep Residual Learning for Image Recognition (ResNet)**  
+  [https://arxiv.org/abs/1512.03385](https://arxiv.org/abs/1512.03385)
+
+- **Squeeze-and-Excitation Networks**  
+  [https://arxiv.org/abs/1709.01507](https://arxiv.org/abs/1709.01507)
+
+- **Deep Networks with Stochastic Depth**  
+  [https://arxiv.org/abs/1603.09382](https://arxiv.org/abs/1603.09382)
+
+- **EfficientNet: Rethinking Model Scaling for CNNs**  
+  [https://arxiv.org/abs/1905.11946](https://arxiv.org/abs/1905.11946)
+
+- **MobileNetV2: Inverted Residuals and Linear Bottlenecks**  
+  [https://arxiv.org/abs/1801.04381](https://arxiv.org/abs/1801.04381)
 
 
