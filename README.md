@@ -12,8 +12,7 @@ Most existing skin disease classification systems rely on architectures original
 
 
 
-
-## 2. Benchmark Architectures
+## 2. Benchmark Models
 
 To evaluate the robustness and generalization performance of our skin disease detection system, we benchmarked three widely used convolutional neural network architectures:
 
@@ -113,6 +112,9 @@ The table below compares classification accuracy and model size across standard 
 
 - **Skin Cancer ISIC Dataset**  
   [https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic/code](https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic/code)
+
+- **Diagnosis of Skin Diseases Using Convolutional Neural Networks**  
+  [https://ieeexplore.ieee.org/document/8474593](https://ieeexplore.ieee.org/document/8474593)
 
 - **Deep Residual Learning for Image Recognition (ResNet)**  
   [https://arxiv.org/abs/1512.03385](https://arxiv.org/abs/1512.03385)
